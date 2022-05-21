@@ -16,7 +16,7 @@ const player = new Fighter({position:{x: 0, y: 0}, velocity:{x: 0, y: 0},
     imageSrc:'./Assets/samuraiMack/idle.png', framesMax: 8, scale: 2.5, offset: {x:215,y:157},
     sprites: {
         idle: {
-            imageSrc:'./Assets/samuraiMack/idle.png',
+            imageSrc:'./Assets/samuraiMack/Idle.png',
             framesMax: 8,
           },
           run: {
@@ -55,7 +55,7 @@ const enemy = new Fighter({position:{x: 400, y: 100}, velocity:{x: 0, y: 0},colo
     imageSrc:'./Assets/kenji/idle.png', framesMax: 4,scale: 2.5, offset: {x:215,y:170},
     sprites: {
         idle: {
-            imageSrc:'./Assets/kenji/idle.png',
+            imageSrc:'./Assets/kenji/Idle.png',
             framesMax: 4,
           },
           run: {
@@ -156,7 +156,7 @@ function animate(){
     }
 
     if(enemy.velocity.y < 0){
-        enemy.switchSprite('jump');s
+        enemy.switchSprite('jump');
     } else if(enemy.velocity.y > 0){
         enemy.switchSprite('fall');
     }
@@ -222,7 +222,7 @@ window.addEventListener('keydown', (event) => {
 
     if(!enemy.dead){
     
-        switch(event.key){
+        switch(event.key.toLowerCase()){
            //Player 2 movement
         case 'arrowright':
             keys.arrowright.pressed = true;
